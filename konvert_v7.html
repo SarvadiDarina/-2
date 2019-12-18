@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Модуль 2</title>
+  </head>
+<body>
+  <label> Українська гривня(UAH) <input type="number" name="grivnas" id="grivnas"></label>
+   <br> <button id="button1">Конвертувати</button> <br>
+    <label> Молдавська лея  (MDL)<input type="number" name="leyas" id="leyas"></label>
+ </div>
+    <script>
+        function leya(x) {
+            return x * 0.73;
+        }
+
+        let button1 = document.getElementById("button1");
+        button1.onclick = function (x) {
+            let minutes = parseFloat(document.getElementById("grivnas").value);
+            document.getElementById("leyas").value = leya(minutes);
+
+
+        }
+
+    </script>
+</body>
+</html>

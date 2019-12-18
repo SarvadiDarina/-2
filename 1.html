@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML CSS JS - Module 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .least-profit td {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Модульна контрольна робота №2</h1>
+        <small>студента 1-го курсу, Сарваді Дарини Богданівни</small>
+        <br>
+        <small>варіант <b>7</b></small>
+        
+        <hr>
+        
+        <div>
+           <table class="table table-hover">
+               <thead>
+                   <th>ПIБ</th>
+                   <th>Стать</th>
+                   <th>Вік</th>
+                   <th>Назва країни</th>
+                   <th>Оцінки зі змагань</th>
+               </thead>
+               <tbody id="t">
+
+            </tbody>
+        </table>
+
+           <hr>
+           <button class="btn btn-primary" id="actionButton">
+               Переможець змагань
+           </button>
+        </div>
+
+    </div>
+    <script>
+        let competition = [{
+            name: 'Vova',
+            gender: 'm',
+            age: 24,
+            country: 'ua',
+            results: [3, 4, 5]
+        }, {
+            name: 'Olexandr',
+            gender: 'm',
+            age: 28,
+            country: 'ru',
+            results: [1, 8, 5]
+        },
+        {
+            name: 'John',
+            gender: 'm',
+            age: 22,
+            country: 'us',
+            results: [3, 8, 4]
+        },
+        {
+            name: 'Lena',
+            gender: 'w',
+            age: 27,
+            country: 'ru',
+            results: [10, 2, 7]
+        },
+        {
+            name: 'Anna',
+            gender: 'w',
+            age: 27,
+            country: 'en',
+            results: [8, 6, 1]
+        }];
+
+        let t = document.getElementById('t');
+
+        for (let i = 0; i < competition.length; i++) {
+            let person = competition[i];
+
+            t.innerHTML += `<tr><td>${person.name}</td><td>${person.gender}</td><td>${person.age}</td><td>${person.country}</td><td>${person.results.join(', ')}</td></tr>`;
+        }
+    </script>
+</body>
+
+</html>
